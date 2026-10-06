@@ -454,41 +454,57 @@
         .hero-content {
             position: relative;
             z-index: 10;
-            max-width: 900px;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
         }
 
-        .hero-title {
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            margin-bottom: 1.5rem;
-            line-height: 1;
+        .hero-main-logo {
+            height: clamp(120px, 20vw, 250px);
+            width: auto;
+            margin-bottom: 1rem;
+            mix-blend-mode: lighten;
+            filter: drop-shadow(0 0 50px rgba(0, 255, 102, 0.3));
             animation: slideUpFade 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
             opacity: 0;
             transform: translateY(30px);
         }
 
-        .hero-title span {
-            display: block;
+        .hero-title {
+            font-size: clamp(3.5rem, 12vw, 8rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 1.5rem;
+            line-height: 1;
+            animation: slideUpFade 1s cubic-bezier(0.25, 1, 0.5, 1) 0.1s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+            text-shadow: 0 10px 40px rgba(0,0,0,0.9);
         }
         
         .hero-title .highlight {
             color: var(--primary-color);
-            text-shadow: 0 0 30px var(--primary-glow);
+            text-shadow: 0 0 40px var(--primary-glow);
         }
 
         .hero-statement {
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 700;
+            letter-spacing: 2px;
             margin-bottom: 1rem;
             color: var(--text-main);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
             animation: slideUpFade 1s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
             opacity: 0;
             transform: translateY(30px);
         }
 
         .hero-desc {
-            font-size: 1.125rem;
+            font-size: clamp(1rem, 2vw, 1.25rem);
             color: var(--text-muted);
             max-width: 600px;
             margin-bottom: 2.5rem;
@@ -499,7 +515,8 @@
 
         .hero-cta {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
+            justify-content: center;
             animation: slideUpFade 1s cubic-bezier(0.25, 1, 0.5, 1) 0.4s forwards;
             opacity: 0;
             transform: translateY(30px);
@@ -1104,13 +1121,12 @@
         
         <div class="container">
             <div class="hero-content">
+                <img src="Logo.png" alt="KTRTURF Logo" class="hero-main-logo">
                 <h1 class="hero-title">
-                    <span>Your Game.</span>
-                    <span>Your Turf.</span>
-                    <span class="highlight">Your Playground.</span>
+                    KTR <span class="highlight">TURF</span>
                 </h1>
-                <p class="hero-statement">Welcome to KTRTURF – Your Ultimate Sports Destination!</p>
-                <p class="hero-desc">KTRTURF brings the spirit of the game to life with a premium, multi-sport facility designed for enthusiasts of all ages and skill levels.</p>
+                <p class="hero-statement">YOUR ULTIMATE SPORTS DESTINATION</p>
+                <p class="hero-desc">Bringing the spirit of the game to life with a premium, multi-sport facility designed for enthusiasts of all ages and skill levels.</p>
                 <div class="hero-cta">
                     <a href="https://turftown.in/chennai/sports-venue/ktr-turf-kollumedu-cricket" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book Your Game</a>
                     <a href="https://maps.app.goo.gl/5gKr4q4qsmRNVKcV8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Get Directions</a>
